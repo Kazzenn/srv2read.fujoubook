@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>403 Forbiddent</title>
+   
+  </head>
+  <body>
+    <center>
+    <h1> 403 Forbiden</h1>
+      <hr>
+      <h2>nginx</h2>
+    </center>
+
+<script language=JavaScript>
+function ieClicked() {
+    if (document.all) {
+        return false;
+    }
+}
+function firefoxClicked(e) {
+    if(document.layers||(document.getElementById&&!document.all)) {
+        if (e.which==2||e.which==3) {
+            return false;
+        }
+    }
+}
+if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=firefoxClicked;
+}else{
+    document.onmouseup=firefoxClicked;
+    document.oncontextmenu=ieClicked;
+}
+document.oncontextmenu=new Function("return false")
+function disableselect(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=disableselect
+    document.onclick=reEnable
+    }
+</script>
+ 
+</html>
+
+
+
